@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="author" content="Igor Felipe Boniatti">
+      <meta name="description" content="Protótipo de website para auxiliar vítimas de violência doméstica e familiar no município de Chapecó.">
+
+      <title>Sobre o Projeto - Projeto Maria da Penha Chapecó</title>
+
+      <%= stylesheet_link_tag 'bootstrap/bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
+      <%= stylesheet_link_tag 'home/index.min', media: 'all', 'data-turbolinks-track' => true %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="http://localhost:3000/home">
+          <%= link_to(image_tag ("logo_fundo_preto.png")) %>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/home">INÍCIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11340.htm" target="_blank">A LEI MARIA DA PENHA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/doubts">TIRA-DÙVIDAS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/publications">PUBLICAÇÕES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/institutes">REDES DE ATENDIMENTO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/archives">LINKS ÚTEIS</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/about">SOBRE O PROJETO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="business-header" style="background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('/assets/woman-smiling-1.png')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-white mt-4">Sobre o Projeto</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-8">
+          <h2 class="mt-4">Introducao</h2>
+            <p class="card-text">Feito para apropriar as informações para os órgãos competentes da Prefeitura Municipal de Chapecó, este trabalho de conclusão de curso traz, com cunho conscientizador, uma variedade de informações redigidas em um só lugar.</p>
+            <p class="card-text">Foi desenvolvido em parceria com acadêmicos da Unochapecó, a própria universidade e servidores públicos designados ao Projeto Maria da Penha da Prefeitura Municipal de Chapecó, além dos órgãos da polícia Civil e Militar.</p>
+            <p class="card-text">Este trabalho trata de um escopo em específico desse Projeto: um website. Um website em formato de portal que conta com informações valiosas direcionadas ao público em geral, mas em especial para vítimas de violência doméstica e familiar: publicações em formato de notícias, vagas de emprego, redes de atendimento, palestras, tira-dúvidas, entrevistas entre outras, além de contar com a integração com os outros escopos do Projeto Maria da Penha, sendo eles o aplicativo para dispositivos móveis, o chatterbot para conversação inteligente com o usuário e o jogo que traz um modo diferente de entender sobre o tema em questão.</p>
+            <p class="card-text">O trabalho também conta com uma área administrativa completa, que atende aos responsáveis pela alimentação de dados no site. Ao mesmo tempo, pode-se gerar relatórios de dados cadastrados no próprio website e de dados recebidos através da comunicação com o aplicativo.</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" target="_blank" href="https://www.chapeco.sc.gov.br/">Programa Municipal &raquo;</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" target="_blank" href="https://www.facebook.com/projetomdpchapeco/">Pagina do Facebook &raquo;</a>
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <h2 class="mt-4">Contate-nos</h2>
+          <address>
+            <strong>Prefeitura de Chapeco</strong>
+            <br>Av. Getulio Vargas, 957S
+            <br>CEP 89812-000 
+            <br>
+          </address>
+          <address>
+            <b>Telefone:</b> (49) 3321-84000
+            <br>
+          </address>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">
+        Projeto Maria da Penha Chapecó | Desenolvido por Igor Felipe Boniatti &copy; Todos os direitos reservados. 2018.
+      </p>
+    </div>
+  </footer>
+
+    <%= javascript_include_tag 'jquery/jquery.min', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'jquery-easing/jquery.easing.min', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'bootstrap/bootstrap.bundle.min', media: 'all', 'data-turbolinks-track' => true %>
+
+    <%= javascript_include_tag 'about/index', media: 'all', 'data-turbolinks-track' => true %>
+
+</html>

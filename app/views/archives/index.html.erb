@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="author" content="Igor Felipe Boniatti">
+      <meta name="description" content="Protótipo de website para auxiliar vítimas de violência doméstica e familiar no município de Chapecó.">
+
+      <title>Links Úteis - Projeto Maria da Penha Chapecó</title>
+
+      <%= stylesheet_link_tag 'bootstrap/bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
+      <%= stylesheet_link_tag 'home/index.min', media: 'all', 'data-turbolinks-track' => true %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="http://localhost:3000/home">
+          <%= link_to(image_tag ("logo_fundo_preto.png")) %>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/home">INÍCIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11340.htm" target="_blank">A LEI MARIA DA PENHA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/doubts">TIRA-DÙVIDAS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/publications">PUBLICAÇÕES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/institutes">REDES DE ATENDIMENTO</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/archives">LINKS ÚTEIS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/about">SOBRE O PROJETO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="jumbotron my-2">
+      <h1 class="display-4 text-center">LINKS ÚTEIS</h1>
+    </header><p>
+
+    <div class="container">
+      
+      <div class="row">
+
+        <% @archives.each do |archive| %>
+
+          <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+              <h4 class="card-header"><%= archive.name %></h4>
+              <div class="card-body">
+                <p class="card-body"><%= archive.category.name %></p>
+                <p class="card-text"><%= archive.description %></p>
+              </div>
+              <div class="card-footer">
+                <a href="<%= archive.arch.url %>" target="_blank" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+
+        <% end %>
+
+      </div>
+    </div>
+
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Anterior</span>
+        </a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">3</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Proximo</span>
+        </a>
+      </li>
+    </ul>
+  </body>
+
+
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">
+        Projeto Maria da Penha Chapecó | Desenolvido por Igor Felipe Boniatti &copy; Todos os direitos reservados. 2018.
+      </p>
+    </div>
+  </footer>
+
+    <%= javascript_include_tag 'jquery/jquery.min', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'bootstrap/bootstrap.bundle.min', media: 'all', 'data-turbolinks-track' => true %>
+
+    <%= javascript_include_tag 'home/index.min', media: 'all', 'data-turbolinks-track' => true %>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta name="author" content="Igor Felipe Boniatti">
+	    <meta name="description" content="Protótipo de website para auxiliar vítimas de violência doméstica e familiar no município de Chapecó.">
+
+	    <title>Tira-Dúvidas - Projeto Maria da Penha Chapecó</title>
+
+	    <%= stylesheet_link_tag 'bootstrap/bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
+	    <%= stylesheet_link_tag 'home/index.min', media: 'all', 'data-turbolinks-track' => true %>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="http://localhost:3000/home">
+					<%= link_to(image_tag ("logo_fundo_preto.png")) %>
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="http://localhost:3000/home">INÍCIO</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11340.htm" target="_blank">A LEI MARIA DA PENHA</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link js-scroll-trigger" href="http://localhost:3000/doubts">TIRA-DÙVIDAS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="http://localhost:3000/publications">PUBLICAÇÕES</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="http://localhost:3000/institutes">REDES DE ATENDIMENTO</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="http://localhost:3000/archives">LINKS ÚTEIS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="http://localhost:3000/about">SOBRE O PROJETO</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<header class="bg-primary text-white">
+			<div class="container text-center">
+				<h1> TIRA-DÚVIDAS </h1>
+				<p class="lead"> Denunciar é o primeiro passo para sair da violência doméstica. </p>
+			</div>
+		</header><p>
+
+	    <div class="container">			
+
+			<% @doubts.each_with_index do |doubt, index| %>
+
+				<div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="card">
+						<div class="card-header" role="tab" id="heading<%= doubt.id %>">
+							<h5 class="mb-0">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= doubt.id %>" aria-expanded="true" aria-controls="collapse<%= doubt.id %>">
+									<%= doubt.question.ask.html_safe %>
+								</a>
+							</h5>
+						</div>
+
+						<% if index == 0 %>
+
+							<div id="collapse<%= doubt.id %>" class="collapse show" role="tabpanel" aria-labelledby="heading<%= doubt.id %>">
+								<div class="card-body">
+									<%= doubt.answer.html_safe %>
+								</div>
+							</div>
+
+						<% else %>
+
+							<div id="collapse<%= doubt.id %>" class="collapse" role="tabpanel" aria-labelledby="heading<%= doubt.id %>">
+								<div class="card-body">
+									<%= doubt.answer.html_safe %>
+								</div>
+							</div>
+
+						<% end %>
+
+					</div>
+				</div>
+
+			<% end %>
+
+	    </div>
+
+		
+		<div class="container" style="margin-top: 2%">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="card my-4">
+						<h5 class="card-header">Deixe a sua dúvida:</h5>
+						<div class="card-body">
+							<form>
+								<div class="form-group">
+									<textarea class="form-control" rows="3"></textarea>
+								</div>
+								<button type="submit" class="btn btn-primary btn-xl js-scroll-trigger">Enviar</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+
+    <footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">
+				Projeto Maria da Penha Chapecó | Desenolvido por Igor Felipe Boniatti &copy; Todos os direitos reservados. 2018.
+			</p>
+		</div>
+    </footer>
+
+    <%= javascript_include_tag 'jquery/jquery.min', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'jquery-easing/jquery.easing.min', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'bootstrap/bootstrap.bundle.min', media: 'all', 'data-turbolinks-track' => true %>
+
+    <%= javascript_include_tag 'about/index', media: 'all', 'data-turbolinks-track' => true %>
+
+</html>

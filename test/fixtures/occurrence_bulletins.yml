@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  occurrence_date: 2018-11-07
+  uncertain_date: MyString
+  location_type: MyString
+  report: MyText
+  person: one
+
+two:
+  occurrence_date: 2018-11-07
+  uncertain_date: MyString
+  location_type: MyString
+  report: MyText
+  person: two

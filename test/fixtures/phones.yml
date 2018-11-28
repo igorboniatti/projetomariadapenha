@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  country_code: 1
+  ddd: 1
+  number: 1
+
+two:
+  country_code: 1
+  ddd: 1
+  number: 1

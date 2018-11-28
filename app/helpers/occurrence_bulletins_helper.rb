@@ -1,0 +1,2 @@
+module OccurrenceBulletinsHelper
+end

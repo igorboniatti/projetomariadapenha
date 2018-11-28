@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @archive.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @archive.category %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @archive.description %>
+</p>
+
+<p>
+  <strong>Arch:</strong>
+  <%= @archive.arch %>
+</p>
+
+<%= link_to 'Edit', edit_archive_path(@archive) %> |
+<%= link_to 'Back', archives_path %>
