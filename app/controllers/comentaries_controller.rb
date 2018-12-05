@@ -23,17 +23,24 @@ class ComentariesController < ApplicationController
 
   # POST /comentaries
   # POST /comentaries.json
-  def create
-    @comentary = Comentary.new(comentary_params)
+  #def create
+  #  @comentary = Comentary.new(comentary_params)
 
+    #espond_to do |format|
+     # if @comentary.save
+      #  format.html { redirect_to @comentary, notice: 'Comentary was successfully created.' }
+       # format.json { render :show, status: :created, location: @comentary }
+      #else
+      #  format.html { render :new }
+      #  format.json { render json: @comentary.errors, status: :unprocessable_entity }
+      #end
+    #end
+
+  def create
     respond_to do |format|
-      if @comentary.save
-        format.html { redirect_to @comentary, notice: 'Comentary was successfully created.' }
-        format.json { render :show, status: :created, location: @comentary }
-      else
-        format.html { render :new }
-        format.json { render json: @comentary.errors, status: :unprocessable_entity }
-      end
+      @comentary = Comentary.new(comentary_params)
+      @comentary.save
+      format.html { redirect_to request.referer, notice: 'Comentário cadastrado com sucesso.' }
     end
   end
 

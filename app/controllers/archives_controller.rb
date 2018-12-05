@@ -4,7 +4,8 @@ class ArchivesController < ApplicationController
   # GET /archives
   # GET /archives.json
   def index
-    @archives = Archive.all
+    #@archives = Archive.all
+    @archives = Archive.page(params[:page]).per(9)
   end
 
   # GET /archives/1

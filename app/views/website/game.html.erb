@@ -14,63 +14,80 @@
 	</head>
 
 	<body style="background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('/assets/game-maria-da-penha-na-escola.png')">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-			<div class="container">
-				<a class="navbar-brand" href="http://localhost:3000/home">
-					<%= link_to(image_tag ("logo_fundo_preto.png")) %>
-				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="http://localhost:3000/home">INÍCIO</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11340.htm" target="_blank">A LEI MARIA DA PENHA</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="http://localhost:3000/doubts">TIRA-DÙVIDAS</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="http://localhost:3000/publications">PUBLICAÇÕES</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="http://localhost:3000/institutes">REDES DE ATENDIMENTO</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="http://localhost:3000/archives">LINKS ÚTEIS</a>
-						</li>
-						<li class="nav-item active">
-							<a class="nav-link js-scroll-trigger" href="http://localhost:3000/about">SOBRE O PROJETO</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="http://localhost:3000/home">
+          <%= link_to(image_tag("logo_fundo_preto.png", :alt => "logo", :title => "Home"), "http://localhost:3000/home") %>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11340.htm" target="_blank">A LEI MARIA DA PENHA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/doubts">TIRA-DÙVIDAS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownNews" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="http://localhost:3000/publications">PUBLICAÇÕES</a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownNews">
+                <a class="dropdown-item" href="http://localhost:3000/publications">NOTÍCIAS</a>
+                <a class="dropdown-item" href="http://localhost:3000/compromisso_e_atitude">COMPROMISSO E ATITUDE</a>
+                <a class="dropdown-item" href="http://localhost:3000/ministerio_publico">MINISTÉRIO PÚBLICO</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/institutes">REDES DE ATENDIMENTO</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownArchives" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="http://localhost:3000/archives">LINKS ÚTEIS</a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownArchives">
+                <a class="dropdown-item" href="http://localhost:3000/archives">TODOS OS ARQUIVOS</a>
+                <a class="dropdown-item" href="http://localhost:3000/vagas">VAGAS DE EMPREGO</a>
+                <a class="dropdown-item" href="http://localhost:3000/videos">VIDEOS</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownAbout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="http://localhost:3000/about">SOBRE O PROJETO</a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAbout">
+                <a class="dropdown-item" href="http://localhost:3000/about">SOBRE</a>
+                <a class="dropdown-item" href="http://localhost:3000/game">GAME</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 		<section>
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6" style="color:white">
-						<h1 class="mt-5">Projeto Game Maria da Penha nas Escolas</h1>
-						<p>O grande aumento no índice de violência doméstica e familiar contra a mulher no Brasil e principalmente no estado de Santa Catarina e a falta de métodos ou soluções diversificadas que combatessem esse tipo de violência fez com que surgisse a necessidade por meio da tecnologia de criar meios de não somente buscar o combate, mas de levar o conhecimento sobre a lei 11.340/2006 Maria da Penha a toda comunidade. O desenvolvimento de um protótipo de jogo baseado no Gibi Maria da Penha na Escola, em conjunto com a prefeitura municipal de Chapecó – SC, apresenta uma solução eficaz e promissora para a multiplicação do conhecimento visando o início da aprendizagem sobre a lei Maria da Penha para as crianças. Neste trabalho também consta detalhes da produção do protótipo que é composto por um game runner, história do gibi e um quiz.</p>
-						<p> Você pode clicar em um dos botões abaixo para transferir o jogo para seu computador ou para ver o tutorial de instalação. </p>
-						<a class="btn btn-primary btn-xl js-scroll-trigger" href="https://drive.google.com/file/d/1V0tzdktGgGyAVriOzQthzm9P64rUx6sd/view?ts=5bdc7006">Baixar o game</a>
+						<h1 class="mt-5">Projeto Game</h1><h1> Maria da Penha nas Escolas</h1>
+						<p style="font-size: 16px; text-align: justify;">O grande aumento no índice de violência doméstica e familiar contra a mulher no Brasil e principalmente no estado de Santa Catarina e a falta de métodos ou soluções diversificadas que combatessem esse tipo de violência fez com que surgisse a necessidade por meio da tecnologia de criar meios de não somente buscar o combate, mas de levar o conhecimento sobre a lei 11.340/2006 Maria da Penha a toda comunidade. O desenvolvimento de um protótipo de jogo baseado no Gibi Maria da Penha na Escola, em conjunto com a prefeitura municipal de Chapecó – SC, apresenta uma solução eficaz e promissora para a multiplicação do conhecimento visando o início da aprendizagem sobre a lei Maria da Penha para as crianças. Neste trabalho também consta detalhes da produção do protótipo que é composto por um game runner, história do gibi e um quiz.</p>
+						<p style="font-size: 16px"> Você pode clicar em um dos botões abaixo para transferir o jogo para seu computador ou para ver o tutorial de instalação. </p>
+						<a class="btn btn-primary btn-xl js-scroll-trigger" href="https://drive.google.com/file/d/1V0tzdktGgGyAVriOzQthzm9P64rUx6sd/view?ts=5bdc7006" target="_blank">Baixar o game</a>
 						<button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle="modal" data-target="#Modal">Tutorial</button>
 
 						<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
 							<div class="modal-dialog" role="document">
 								<div class="modal-content">
 									<div class="modal-header" >
-										<h5 class="modal-title" id="ModalLabel">Tutorial de Instalação</h5>
+										<h5 class="modal-title" id="ModalLabel" style="color: black;">Tutorial de Instalação</h5>
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 											<span aria-hidden="true">&times;</span>
 										</button>
 									</div>
 									<div class="modal-body">
-									...
+										<h5 class="modal-body" id="ModalLabel" style="color: black;">Para baixar o jogo, basta selecionar a opção "Fazer o Download" na página aberta!</h5>
+										<h5 class="modal-body" id="ModalLabel" style="color: black;">Após extrair o conteúdo do arquivo baixado, basta executar o arquivo "MariaDaPenhaNaEscola.exe". As configurações que devem ser utilizadas para a jogatina são:
+										</h5>
+										<h5 class="modal-body" id="ModalLabel" style="color: black;">Screen: 1024 x 768</h5>
+										<h5 class="modal-body" id="ModalLabel" style="color: black;">Graphics quality: Ultra</h5>
+										<h5 class="modal-body" id="ModalLabel" style="color: black;">Select monitor: Display 1</h5>
+										<h5 class="modal-body" id="ModalLabel" style="color: black;">A caixa "Windowed" deve estar marcada com um "certo".</h5>
 									</div>
 									<div class="modal-footer">
 										<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>

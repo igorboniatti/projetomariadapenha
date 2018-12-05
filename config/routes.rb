@@ -4,11 +4,17 @@ Rails.application.routes.draw do
   resources :publications
   resources :doubts
   resources :institutes
+  resources :comentaries
+  resources :questions
 
   get "home" => "website#home", as: :home  
   get "about" => "website#about", as: :about
   get "game" => "website#game", as: :game
-  get "maria_da_penha" => "website#maria_da_penha", as: :maria_da_penha
+  get "vagas" => "website#vagas", as: :vagas
+  get "videos" => "website#videos", as: :videos
+  get "compromisso_e_atitude" => "website#compromisso_e_atitude", as: :compromisso_e_atitude
+  get "ministerio_publico" => "website#ministerio_publico", as: :ministerio_publico
+
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 end

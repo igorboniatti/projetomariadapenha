@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta name="author" content="Igor Felipe Boniatti">
+	    <meta name="description" content="Protótipo de website para auxiliar vítimas de violência doméstica e familiar no município de Chapecó.">
+
+	    <title>Publicações - Projeto Maria da Penha Chapecó</title>
+
+	    <%= stylesheet_link_tag 'bootstrap/bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
+	    <%= stylesheet_link_tag 'home/index.min', media: 'all', 'data-turbolinks-track' => true %>
+	</head>
+
+	<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="http://localhost:3000/home">
+          <%= link_to(image_tag("logo_fundo_preto.png", :alt => "logo", :title => "Home"), "http://localhost:3000/home") %>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11340.htm" target="_blank">A LEI MARIA DA PENHA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/doubts">TIRA-DÙVIDAS</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownNews" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="http://localhost:3000/publications">PUBLICAÇÕES</a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownNews">
+                <a class="dropdown-item" href="http://localhost:3000/publications">NOTÍCIAS</a>
+                <a class="dropdown-item" href="http://localhost:3000/compromisso_e_atitude">COMPROMISSO E ATITUDE</a>
+                <a class="dropdown-item" href="http://localhost:3000/ministerio_publico">MINISTÉRIO PÚBLICO</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/institutes">REDES DE ATENDIMENTO</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownArchives" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="http://localhost:3000/archives">LINKS ÚTEIS</a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownArchives">
+                <a class="dropdown-item" href="http://localhost:3000/archives">TODOS OS ARQUIVOS</a>
+                <a class="dropdown-item" href="http://localhost:3000/vagas">VAGAS DE EMPREGO</a>
+                <a class="dropdown-item" href="http://localhost:3000/videos">VIDEOS</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownAbout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="http://localhost:3000/about">SOBRE O PROJETO</a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAbout">
+                <a class="dropdown-item" href="http://localhost:3000/about">SOBRE</a>
+                <a class="dropdown-item" href="http://localhost:3000/game">GAME</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+		<div class="container" style="margin-top: 2%">
+			<div class="row">
+				<div class="col-lg-8">
+					<h1 class="mt-4">
+						Ministério Público de Santa Catarina
+					</h1>
+					<hr>
+
+					<% @news.each do |news| %>
+            <% if news.link.include?("www.mpsc.mp.br") %>
+            
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h2 class="card-title">
+                    <%= news.title %>                   
+                  </h2>
+                  <p class="card-text">
+                    <%= news.description.truncate(333).html_safe %>
+                  </p>
+                  <a href="<%= news.link %>" class="btn btn-primary btn-xl js-scroll-trigger" target="_blank">
+                    Leia a Notícia Original &rarr;
+                  </a>
+                </div>
+                <div class="card-footer text-muted">
+                  Publicado em <%= news.time %> por Compromisso e Atitude
+                </div>
+              </div>
+
+            <% end %>
+          <% end %>
+
+
+				</div>		
+			</div>
+		</div>
+
+	</body>
+
+    <!-- RODAPÉ -->
+    <footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">
+				Projeto Maria da Penha Chapecó | Desenolvido por Igor Felipe Boniatti &copy; Todos os direitos reservados. 2018.
+			</p>
+		</div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <%= javascript_include_tag 'jquery/jquery.min', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'bootstrap/bootstrap.bundle.min', media: 'all', 'data-turbolinks-track' => true %>
+
+</html>

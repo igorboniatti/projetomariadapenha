@@ -24,16 +24,10 @@ class QuestionsController < ApplicationController
   # POST /questions
   # POST /questions.json
   def create
-    @question = Question.new(question_params)
-
     respond_to do |format|
-      if @question.save
-        format.html { redirect_to @question, notice: 'Question was successfully created.' }
-        format.json { render :show, status: :created, location: @question }
-      else
-        format.html { render :new }
-        format.json { render json: @question.errors, status: :unprocessable_entity }
-      end
+      @question = Question.new(question_params)
+      @question.save
+      format.html { redirect_to request.referer, notice: 'Pergunta cadastrada. Os editores irão respondê-la o mais rápido possível.' }
     end
   end
 
