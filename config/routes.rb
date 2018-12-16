@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :comentaries
   resources :questions
 
+  root :to => "website#home"
   get "home" => "website#home", as: :home  
   get "about" => "website#about", as: :about
   get "game" => "website#game", as: :game

@@ -10,64 +10,64 @@
 	    <title>Projeto Game Maria da Penha nas Escolas</title>
 
 	    <%= stylesheet_link_tag 'bootstrap/bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
-	    <%= stylesheet_link_tag 'home/index.min', media: 'all', 'data-turbolinks-track' => true %>
+	    <%= stylesheet_link_tag 'home/index', media: 'all', 'data-turbolinks-track' => true %>
 	</head>
 
 	<body style="background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('/assets/game-maria-da-penha-na-escola.png')">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-      <div class="container">
-        <a class="navbar-brand" href="http://localhost:3000/home">
-          <%= link_to(image_tag("logo_fundo_preto.png", :alt => "logo", :title => "Home"), "http://localhost:3000/home") %>
-        </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11340.htm" target="_blank">A LEI MARIA DA PENHA</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/doubts">TIRA-DÙVIDAS</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownNews" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="http://localhost:3000/publications">PUBLICAÇÕES</a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownNews">
-                <a class="dropdown-item" href="http://localhost:3000/publications">NOTÍCIAS</a>
-                <a class="dropdown-item" href="http://localhost:3000/compromisso_e_atitude">COMPROMISSO E ATITUDE</a>
-                <a class="dropdown-item" href="http://localhost:3000/ministerio_publico">MINISTÉRIO PÚBLICO</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/institutes">REDES DE ATENDIMENTO</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownArchives" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="http://localhost:3000/archives">LINKS ÚTEIS</a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownArchives">
-                <a class="dropdown-item" href="http://localhost:3000/archives">TODOS OS ARQUIVOS</a>
-                <a class="dropdown-item" href="http://localhost:3000/vagas">VAGAS DE EMPREGO</a>
-                <a class="dropdown-item" href="http://localhost:3000/videos">VIDEOS</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown active">
-              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownAbout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="http://localhost:3000/about">SOBRE O PROJETO</a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAbout">
-                <a class="dropdown-item" href="http://localhost:3000/about">SOBRE</a>
-                <a class="dropdown-item" href="http://localhost:3000/game">GAME</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+	    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+	      <div class="container">
+	        <a class="navbar-brand" href="http://localhost:3000/home">
+	          <%= link_to(image_tag("logo_fundo_preto.png", :alt => "logo", :title => "Home"), "home") %>
+	        </a>
+	        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbarResponsive">
+	          <ul class="navbar-nav ml-auto">
+	            <li class="nav-item">
+	              <a class="nav-link js-scroll-trigger" href="http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11340.htm" target="_blank">A LEI MARIA DA PENHA</a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link js-scroll-trigger" href="doubts">TIRA-DÙVIDAS</a>
+	            </li>
+	            <li class="nav-item dropdown">
+	              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownNews" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="publications">PUBLICAÇÕES</a>
+	              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownNews">
+	                <a class="dropdown-item" href="publications">NOTÍCIAS</a>
+	                <a class="dropdown-item" href="compromisso_e_atitude">COMPROMISSO E ATITUDE</a>
+	                <a class="dropdown-item" href="ministerio_publico">MINISTÉRIO PÚBLICO</a>
+	              </div>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link js-scroll-trigger" href="institutes">REDES DE ATENDIMENTO</a>
+	            </li>
+	            <li class="nav-item dropdown">
+	              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownArchives" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="archives">LINKS ÚTEIS</a>
+	              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownArchives">
+	                <a class="dropdown-item" href="archives">TODOS OS ARQUIVOS</a>
+	                <a class="dropdown-item" href="vagas">VAGAS DE EMPREGO</a>
+	                <a class="dropdown-item" href="videos">VIDEOS</a>
+	              </div>
+	            </li>
+	            <li class="nav-item dropdown active">
+	              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownAbout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="about">SOBRE O PROJETO</a>
+	              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAbout">
+	                <a class="dropdown-item" href="about">SOBRE</a>
+	                <a class="dropdown-item" href="game">GAME</a>
+	              </div>
+	            </li>
+	          </ul>
+	        </div>
+	      </div>
+	    </nav>
 
 		<section>
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6" style="color:white">
 						<h1 class="mt-5">Projeto Game</h1><h1> Maria da Penha nas Escolas</h1>
-						<p style="font-size: 16px; text-align: justify;">O grande aumento no índice de violência doméstica e familiar contra a mulher no Brasil e principalmente no estado de Santa Catarina e a falta de métodos ou soluções diversificadas que combatessem esse tipo de violência fez com que surgisse a necessidade por meio da tecnologia de criar meios de não somente buscar o combate, mas de levar o conhecimento sobre a lei 11.340/2006 Maria da Penha a toda comunidade. O desenvolvimento de um protótipo de jogo baseado no Gibi Maria da Penha na Escola, em conjunto com a prefeitura municipal de Chapecó – SC, apresenta uma solução eficaz e promissora para a multiplicação do conhecimento visando o início da aprendizagem sobre a lei Maria da Penha para as crianças. Neste trabalho também consta detalhes da produção do protótipo que é composto por um game runner, história do gibi e um quiz.</p>
-						<p style="font-size: 16px"> Você pode clicar em um dos botões abaixo para transferir o jogo para seu computador ou para ver o tutorial de instalação. </p>
+						<p style="font-size: 12px; text-align: justify;">O grande aumento no índice de violência doméstica e familiar contra a mulher no Brasil e principalmente no estado de Santa Catarina e a falta de métodos ou soluções diversificadas que combatessem esse tipo de violência fez com que surgisse a necessidade por meio da tecnologia de criar meios de não somente buscar o combate, mas de levar o conhecimento sobre a lei 11.340/2006 Maria da Penha a toda comunidade. O desenvolvimento de um protótipo de jogo baseado no Gibi Maria da Penha na Escola, em conjunto com a prefeitura municipal de Chapecó – SC, apresenta uma solução eficaz e promissora para a multiplicação do conhecimento visando o início da aprendizagem sobre a lei Maria da Penha para as crianças. Neste trabalho também consta detalhes da produção do protótipo que é composto por um game runner, história do gibi e um quiz.</p>
+						<p style="font-size: 12px"> Você pode clicar em um dos botões abaixo para transferir o jogo para seu computador ou para ver o tutorial de instalação. </p>
 						<a class="btn btn-primary btn-xl js-scroll-trigger" href="https://drive.google.com/file/d/1V0tzdktGgGyAVriOzQthzm9P64rUx6sd/view?ts=5bdc7006" target="_blank">Baixar o game</a>
 						<button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle="modal" data-target="#Modal">Tutorial</button>
 
@@ -99,9 +99,28 @@
 				</div>
 			</div>
 		</section>
-
 		
  	</body>
+
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/pt_BR/sdk/xfbml.customerchat.js';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<!-- Your customer chat code -->
+	<div class="fb-customerchat"
+		 attribution=install_email
+		 page_id="673776146339397"
+		 logged_in_greeting="Oi, eu posso ajudar você!"
+		 logged_out_greeting="Oi, eu posso ajudar você!">
+	</div>
 
   	<%= javascript_include_tag 'jquery/jquery.min', media: 'all', 'data-turbolinks-track' => true %>
   	<%= javascript_include_tag 'bootstrap/bootstrap.bundle.min', media: 'all', 'data-turbolinks-track' => true %>

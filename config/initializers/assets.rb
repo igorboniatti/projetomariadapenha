@@ -15,7 +15,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 
 # Rails.application.config.assets.precompile += %w( home/index.css )
-Rails.application.config.assets.precompile += %w( home/index.min.css )
+Rails.application.config.assets.precompile += %w( home/index.css )
 # Rails.application.config.assets.precompile += %w( home/index.js )
 Rails.application.config.assets.precompile += %w( home/index.min.js )
 

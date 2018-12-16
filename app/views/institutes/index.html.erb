@@ -10,56 +10,56 @@
       <title>Redes de Atendimento - Projeto Maria da Penha Chapecó</title>
 
       <%= stylesheet_link_tag 'bootstrap/bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
-      <%= stylesheet_link_tag 'home/index.min', media: 'all', 'data-turbolinks-track' => true %>
+      <%= stylesheet_link_tag 'home/index', media: 'all', 'data-turbolinks-track' => true %>
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="http://localhost:3000/home">
-          <%= link_to(image_tag("logo_fundo_preto.png", :alt => "logo", :title => "Home"), "http://localhost:3000/home") %>
-        </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11340.htm" target="_blank">A LEI MARIA DA PENHA</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/doubts">TIRA-DÙVIDAS</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownNews" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="http://localhost:3000/publications">PUBLICAÇÕES</a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownNews">
-                <a class="dropdown-item" href="http://localhost:3000/publications">NOTÍCIAS</a>
-                <a class="dropdown-item" href="http://localhost:3000/compromisso_e_atitude">COMPROMISSO E ATITUDE</a>
-                <a class="dropdown-item" href="http://localhost:3000/ministerio_publico">MINISTÉRIO PÚBLICO</a>
-              </div>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link js-scroll-trigger" href="http://localhost:3000/institutes">REDES DE ATENDIMENTO</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownArchives" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="http://localhost:3000/archives">LINKS ÚTEIS</a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownArchives">
-                <a class="dropdown-item" href="http://localhost:3000/archives">TODOS OS ARQUIVOS</a>
-                <a class="dropdown-item" href="http://localhost:3000/vagas">VAGAS DE EMPREGO</a>
-                <a class="dropdown-item" href="http://localhost:3000/videos">VIDEOS</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownAbout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="http://localhost:3000/about">SOBRE O PROJETO</a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAbout">
-                <a class="dropdown-item" href="http://localhost:3000/about">SOBRE</a>
-                <a class="dropdown-item" href="http://localhost:3000/game">GAME</a>
-              </div>
-            </li>
-          </ul>
+        <div class="container">
+          <a class="navbar-brand" href="<%= home_path %>">
+            <%= link_to(image_tag("logo_fundo_preto.png", :alt => "logo", :title => "Home"), home_path ) %>
+          </a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11340.htm" target="_blank">A LEI MARIA DA PENHA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="<%= doubts_path %>">TIRA-DÙVIDAS</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownNews" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="<%= publications_path %>">PUBLICAÇÕES</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownNews">
+                  <a class="dropdown-item" href="<%= publications_path %>">NOTÍCIAS</a>
+                  <a class="dropdown-item" href="<%= compromisso_e_atitude_path %>">COMPROMISSO E ATITUDE</a>
+                  <a class="dropdown-item" href="<%= ministerio_publico_path %>">MINISTÉRIO PÚBLICO</a>
+                </div>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link js-scroll-trigger" href="<%= institutes_path %>">REDES DE ATENDIMENTO</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownArchives" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="<%= archives_path %>">LINKS ÚTEIS</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownArchives">
+                  <a class="dropdown-item" href="<%= archives_path %>">TODOS OS ARQUIVOS</a>
+                  <a class="dropdown-item" href="<%= vagas_path %>">VAGAS DE EMPREGO</a>
+                  <a class="dropdown-item" href="<%= videos_path %>">VIDEOS</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownAbout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="<%= about_path %>">SOBRE O PROJETO</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAbout">
+                  <a class="dropdown-item" href="<%= about_path %>">SOBRE</a>
+                  <a class="dropdown-item" href="<%= game_path %>">GAME</a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
     <header class="jumbotron my-2 text-center">
       <h1 class="display-4">REDES DE ATENDIMENTO</h1>
@@ -98,15 +98,35 @@
                :pagination_class => "pagination-sm" %>
     </ul>
     
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          Projeto Maria da Penha Chapecó | Desenvolvido por <a href="https://instagram.com/ifboniatti" target="_blank">Igor Felipe Boniatti</a>. &copy; Todos os direitos reservados. 2018.
+        </p>
+      </div>
+    </footer>
+
   </body>
 
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">
-        Projeto Maria da Penha Chapecó | Desenolvido por Igor Felipe Boniatti &copy; Todos os direitos reservados. 2018.
-      </p>
-    </div>
-  </footer>
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/pt_BR/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <!-- Your customer chat code -->
+  <div class="fb-customerchat"
+     attribution=install_email
+     page_id="673776146339397"
+     logged_in_greeting="Oi, eu posso ajudar você!"
+     logged_out_greeting="Oi, eu posso ajudar você!">
+  </div>
 
   <%= javascript_include_tag 'jquery/jquery.min', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'bootstrap/bootstrap.bundle.min', media: 'all', 'data-turbolinks-track' => true %>

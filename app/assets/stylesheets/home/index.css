@@ -189,11 +189,9 @@ img::-moz-selection {
 }
 
 header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
-  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("/assets/woman-smiling-1.png");
-  background-position: center center;
-  background-size: cover;
+  background-color: transparent;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 header.masthead hr {
