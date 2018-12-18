@@ -6,8 +6,9 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	    <meta name="author" content="Igor Felipe Boniatti">
 	    <meta name="description" content="Protótipo de website para auxiliar vítimas de violência doméstica e familiar no município de Chapecó.">
-
-	    <title>Projeto Maria da Penha Chapecó</title>
+	    
+	    <%= content_for :title, "Projeto Maria da Penha Chapecó" %>		
+	    <%= favicon_link_tag 'logo_fundo_preto.png' %>
 
 	    <%= stylesheet_link_tag 'bootstrap/bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
 	    <%= stylesheet_link_tag 'home/index', media: 'all', 'data-turbolinks-track' => true %>
@@ -28,7 +29,7 @@
               <a class="nav-link js-scroll-trigger" href="http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11340.htm" target="_blank">A LEI MARIA DA PENHA</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="doubts">TIRA-DÙVIDAS</a>
+              <a class="nav-link js-scroll-trigger" href="doubts">TIRA-DÚVIDAS</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbarDropdownNews" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="publications">PUBLICAÇÕES</a>
@@ -93,26 +94,40 @@
     </footer>
 
   </body>
-
-	<!-- Load Facebook SDK for JavaScript -->
-	<div id="fb-root"></div>
+	
 	<script>
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = 'https://connect.facebook.net/pt_BR/sdk/xfbml.customerchat.js';
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
+  		window.fbMessengerPlugins = window.fbMessengerPlugins || {
+    			init: function () {
+      				FB.init({
+        				appId            : '1678638095724206',
+        				autoLogAppEvents : true,
+        				xfbml            : true,
+        				version          : 'v3.0'
+      				});
+    			}, callable: []
+  		};
+  		window.fbAsyncInit = window.fbAsyncInit || function () {
+    			window.fbMessengerPlugins.callable.forEach(function (item) { item(); });
+    			window.fbMessengerPlugins.init();
+  		};
+  		setTimeout(function () {
+    			(function (d, s, id) {
+      				var js, fjs = d.getElementsByTagName(s)[0];
+      				if (d.getElementById(id)) { return; }
+      				js = d.createElement(s);
+      				js.id = id;
+      				js.src = "//connect.facebook.net/pt_BR/sdk/xfbml.customerchat.js";
+      				fjs.parentNode.insertBefore(js, fjs);
+    			}(document, 'script', 'facebook-jssdk'));
+  		}, 0);
 	</script>
 
-	<!-- Your customer chat code -->
-	<div class="fb-customerchat"
-		 attribution=install_email
-		 page_id="673776146339397"
-		 logged_in_greeting="Oi, eu posso ajudar você!"
-		 logged_out_greeting="Oi, eu posso ajudar você!">
+	<div
+  		class="fb-customerchat"
+  		page_id="673776146339397"
+  		ref="">
 	</div>
+
 
   <%= javascript_include_tag 'jquery/jquery.min', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'bootstrap/bootstrap.bundle.min', media: 'all', 'data-turbolinks-track' => true %>
