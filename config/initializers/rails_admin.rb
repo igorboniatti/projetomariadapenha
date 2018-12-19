@@ -8,7 +8,7 @@ RailsAdmin.config do |config|
 
 
   config.navigation_static_links = {
-  	'Página Inicial' => 'http://localhost:3000/home'
+  	'Página Inicial' => 'home_path'
   }
 
   config.navigation_static_label = 'Links Úteis'
