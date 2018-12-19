@@ -80,7 +80,7 @@
 								<p class="card-text">
 									<%= publication.content.truncate(333).html_safe %>
 								</p>
-								<a href="http://localhost:3000/publications/<%= publication.id %>" class="btn btn-primary btn-xl js-scroll-trigger">
+								<a href="<%= publications_path(:publication.id) %>" class="btn btn-primary btn-xl js-scroll-trigger">
 									Leia Mais &rarr;
 								</a>
 							</div>
